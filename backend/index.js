@@ -22,13 +22,20 @@ const __dirname = path.dirname(__filename);
 app.use(
   cors({
     origin: (origin, callback) => {
-      const allowedOrigins = ["http://localhost:5175", "http://localhost:5176"];
+      const allowedOrigins = [
+        "http://localhost:5175",
+        "http://localhost:5176",
+        "https://book-seller-app-admin-panel.netlify.app",
+        "https://book-seller-app-frontend-panel.netlify.app",
+      ];
+
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
       }
     },
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
 );
