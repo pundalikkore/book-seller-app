@@ -1,36 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  BookPlus, 
-  BookOpen, 
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import {
+  BookPlus,
+  BookOpen,
   ShoppingCart,
   ChevronLeft,
-  ChevronRight
-} from 'lucide-react';
-import logo from '../assets/logoicon.png';
-import {styles} from '../assets/dummyStyles';
+  ChevronRight,
+} from "lucide-react";
+import logo from "../assets/logoicon.png";
+import { styles } from "../assets/dummyStyles";
 
 const Sidebar = () => {
   const location = useLocation();
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  
+
   // Detect screen size changes
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-    
-    return () => window.removeEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   const navItems = [
-    { path: '/', icon: BookPlus, label: 'Add Books' },
-    { path: '/list-books', icon: BookOpen, label: 'List Books' },
-    { path: '/orders', icon: ShoppingCart, label: 'Orders' },
+    { path: "/", icon: BookPlus, label: "Add Books" },
+    { path: "/list-books", icon: BookOpen, label: "List Books" },
+    { path: "/orders", icon: ShoppingCart, label: "Orders" },
   ];
 
   const toggleCollapse = () => {
@@ -45,11 +45,7 @@ const Sidebar = () => {
           {navItems.map(({ path, icon: Icon, label }) => {
             const isActive = location.pathname === path;
             return (
-              <Link
-                key={path}
-                to={path}
-                className={styles.mobileNav.item}
-              >
+              <Link key={path} to={path} className={styles.mobileNav.item}>
                 <div className={styles.mobileNav.iconContainer(isActive)}>
                   <Icon className="h-5 w-5 mx-auto" />
                 </div>
@@ -74,14 +70,12 @@ const Sidebar = () => {
               <img src={logo} alt="Logo" className={styles.sidebar.logoImage} />
             </div>
             <div>
-              <h1 className={styles.sidebar.title}>
-                BOOKSHELL
-              </h1>
+              <h1 className={styles.sidebar.title}>BOOKSHELL</h1>
             </div>
           </div>
         )}
-        
-        <button 
+
+        <button
           onClick={toggleCollapse}
           className={styles.sidebar.collapseButton}
         >

@@ -3,26 +3,30 @@ import axios from "axios";
 import { BookPlus, Star } from "lucide-react";
 import { styles } from "../assets/dummyStyles";
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = "https://book-seller-app-5u6t.onrender.com";
 
-  const initialFormData = {
-    title: "",
-    author: "",
-    price: "",
-    image: null,
-    rating: 4,
-    category: "Fiction",
-    description: "",
-    preview: "",
-  };
+const initialFormData = {
+  title: "",
+  author: "",
+  price: "",
+  image: null,
+  rating: 4,
+  category: "Fiction",
+  description: "",
+  preview: "",
+};
 
-  const categories = [
-    "Fiction", "Non-Fiction", "Mystery", "Sci-Fi", 
-    "Biography", "Self-Help", "Thriller"
-  ];
+const categories = [
+  "Fiction",
+  "Non-Fiction",
+  "Mystery",
+  "Sci-Fi",
+  "Biography",
+  "Self-Help",
+  "Thriller",
+];
 
 const AddBooks = () => {
-
   const [formData, setFormData] = useState(initialFormData);
   const [hoverRating, setHoverRating] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -39,15 +43,15 @@ const AddBooks = () => {
     });
 
     try {
-  await axios.post(`${API_BASE}/api/book`, payload);
+      await axios.post(`${API_BASE}/api/book`, payload);
       setMessage({ type: "success", text: "Book added successfully!" });
       setFormData(initialFormData);
     } catch (err) {
-  console.error("AddBooks error response:", err.response?.data, err);
-  setMessage({ 
-    type: "error", 
-    text: err.response?.data?.message || "Failed to add book." 
-  });
+      console.error("AddBooks error response:", err.response?.data, err);
+      setMessage({
+        type: "error",
+        text: err.response?.data?.message || "Failed to add book.",
+      });
     } finally {
       setLoading(false);
     }
@@ -55,22 +59,22 @@ const AddBooks = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;
-    
-    setFormData(prev => ({
+
+    setFormData((prev) => ({
       ...prev,
       image: file,
-      preview: URL.createObjectURL(file)
+      preview: URL.createObjectURL(file),
     }));
   };
 
   const handleStarClick = (rating) => {
-    setFormData(prev => ({ ...prev, rating }));
+    setFormData((prev) => ({ ...prev, rating }));
   };
 
   return (
@@ -129,7 +133,7 @@ const AddBooks = () => {
               <label className={styles.formLabel}>Rating</label>
               <div className={styles.ratingContainer}>
                 <div className={styles.starsContainer}>
-                  {[1, 2, 3, 4, 5].map(starValue => (
+                  {[1, 2, 3, 4, 5].map((starValue) => (
                     <button
                       key={starValue}
                       type="button"
@@ -163,8 +167,10 @@ const AddBooks = () => {
                 onChange={handleChange}
                 className={styles.formInput}
               >
-                {categories.map(cat => (
-                  <option key={cat} value={cat}>{cat}</option>
+                {categories.map((cat) => (
+                  <option key={cat} value={cat}>
+                    {cat}
+                  </option>
                 ))}
               </select>
             </div>
@@ -204,7 +210,9 @@ const AddBooks = () => {
           )}
 
           {message.text && (
-            <p className={`text-${message.type === "success" ? "green" : "red"}-500`}>
+            <p
+              className={`text-${message.type === "success" ? "green" : "red"}-500`}
+            >
               {message.text}
             </p>
           )}

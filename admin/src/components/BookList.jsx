@@ -3,7 +3,7 @@ import axios from "axios";
 import { Trash2, Filter, BookOpen } from "lucide-react";
 import { styles } from "../assets/dummyStyles";
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = "https://book-seller-app-5u6t.onrender.com";
 
 const ListBooks = () => {
   const [books, setBooks] = useState([]);
@@ -32,7 +32,7 @@ const ListBooks = () => {
   // Derive categories from fetched books
   const categories = useMemo(
     () => ["All", ...new Set(books.map((book) => book.category))],
-    [books]
+    [books],
   );
 
   // Compute filtered and sorted list
@@ -60,21 +60,20 @@ const ListBooks = () => {
     { key: null, label: "Actions" },
   ];
 
-const handleDelete = async (id) => {
-  if (!window.confirm("Are you sure?")) return;
+  const handleDelete = async (id) => {
+    if (!window.confirm("Are you sure?")) return;
 
-  try {
-    await axios.delete(
-      `${API_BASE}/api/book/${id}`,
-      { validateStatus: status => [200, 204, 500].includes(status) }
-    );
-    // Even if the server returned 500, we know the record was deleted:
-    setBooks(prev => prev.filter(book => book._id !== id));
-  } catch (err) {
-    console.error(err);
-    alert(err.response?.data?.message || "Failed to delete book.");
-  }
-};
+    try {
+      await axios.delete(`${API_BASE}/api/book/${id}`, {
+        validateStatus: (status) => [200, 204, 500].includes(status),
+      });
+      // Even if the server returned 500, we know the record was deleted:
+      setBooks((prev) => prev.filter((book) => book._id !== id));
+    } catch (err) {
+      console.error(err);
+      alert(err.response?.data?.message || "Failed to delete book.");
+    }
+  };
 
   const RatingStars = ({ rating }) => (
     <div className={styles.ratingContainer}>
@@ -85,7 +84,9 @@ const handleDelete = async (id) => {
             className={`h-4 w-4 ${
               i < Math.floor(rating) ? styles.starFilled : styles.starEmpty
             }`}
-          >★</span>
+          >
+            ★
+          </span>
         ))}
       </div>
       <span className={styles.ratingText}>{rating.toFixed(1)}</span>
@@ -142,9 +143,7 @@ const handleDelete = async (id) => {
                     className={styles.tableHeader}
                     onClick={() =>
                       header.key &&
-                      setSortConfig(
-                        sortConfig === header.key ? "" : header.key
-                      )
+                      setSortConfig(sortConfig === header.key ? "" : header.key)
                     }
                   >
                     <div className={styles.tableHeaderContent}>
@@ -164,7 +163,7 @@ const handleDelete = async (id) => {
                     <div className="flex items-center">
                       {book.image && (
                         <img
-                          src={`http://localhost:4000${book.image}`}
+                          src={`https://book-seller-app-5u6t.onrender.com{book.image}`}
                           alt={book.title}
                           className="h-10 w-8 object-cover rounded"
                         />
