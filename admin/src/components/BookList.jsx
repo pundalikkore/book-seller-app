@@ -157,42 +157,46 @@ const ListBooks = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200">
-              {displayedBooks.map((book) => (
-                <tr key={book._id} className={styles.tableRow}>
-                  <td className={styles.tableCell}>
-                    <div className="flex items-center">
-                      {book.image && (
-                        <img
-                          src={`https://book-seller-app-5u6t.onrender.com{book.image}`}
-                          alt={book.title}
-                          className="h-10 w-8 object-cover rounded"
-                        />
-                      )}
-                      <div className="ml-4">
-                        <div className={styles.bookTitle}>{book.title}</div>
+              {displayedBooks.map((book) => {
+                console.log(book.image); // 👈 DEBUG LINE
+
+                return (
+                  <tr key={book._id} className={styles.tableRow}>
+                    <td className={styles.tableCell}>
+                      <div className="flex items-center">
+                        {book.image && (
+                          <img
+                            src={`https://book-seller-app-5u6t.onrender.com${book.image}`}
+                            alt={book.title}
+                            className="h-10 w-8 object-cover rounded"
+                          />
+                        )}
+                        <div className="ml-4">
+                          <div className={styles.bookTitle}>{book.title}</div>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                  <td className={styles.tableCell}>{book.author}</td>
-                  <td className={styles.tableCell}>
-                    <span className={styles.categoryBadge}>
-                      {book.category}
-                    </span>
-                  </td>
-                  <td className={styles.tableCell}>₹{book.price}</td>
-                  <td className={styles.tableCell}>
-                    <RatingStars rating={book.rating} />
-                  </td>
-                  <td className={`${styles.tableCell} flex gap-3`}>
-                    <button
-                      onClick={() => handleDelete(book._id)}
-                      className={styles.deleteButton}
-                    >
-                      <Trash2 className="w-5 h-5" />
-                    </button>
-                  </td>
-                </tr>
-              ))}
+                    </td>
+                    <td className={styles.tableCell}>{book.author}</td>
+                    <td className={styles.tableCell}>
+                      <span className={styles.categoryBadge}>
+                        {book.category}
+                      </span>
+                    </td>
+                    <td className={styles.tableCell}>₹{book.price}</td>
+                    <td className={styles.tableCell}>
+                      <RatingStars rating={book.rating} />
+                    </td>
+                    <td className={`${styles.tableCell} flex gap-3`}>
+                      <button
+                        onClick={() => handleDelete(book._id)}
+                        className={styles.deleteButton}
+                      >
+                        <Trash2 className="w-5 h-5" />
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

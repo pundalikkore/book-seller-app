@@ -7,7 +7,7 @@ import { useCart } from "../../CartContext/CartContext";
 import { useLocation } from "react-router-dom";
 import { booksPageStyles as styles } from "../../assets/dummystyles";
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = "https://book-seller-app-5u6t.onrender.com";
 const BooksPage = () => {
   const { cart, addToCart, updateCartItem } = useCart();
   const location = useLocation();
@@ -41,12 +41,18 @@ const BooksPage = () => {
   }, []);
 
   // Helpers for cart state
-  const isInCart = (id) => cart.items?.some(item => item.id === id);
-  const getCartQuantity = (id) => cart.items?.find(item => item.id === id)?.quantity || 0;
+  const isInCart = (id) => cart.items?.some((item) => item.id === id);
+  const getCartQuantity = (id) =>
+    cart.items?.find((item) => item.id === id)?.quantity || 0;
 
   // Use context methods instead of dispatch
   const handleAddToCart = (book) =>
-    addToCart({ id: book._id, title: book.title, price: book.price, quantity: 1 });
+    addToCart({
+      id: book._id,
+      title: book.title,
+      price: book.price,
+      quantity: 1,
+    });
   const handleIncrement = (id) =>
     updateCartItem({ id, quantity: getCartQuantity(id) + 1 });
   const handleDecrement = (id) =>
@@ -162,7 +168,9 @@ const BooksPage = () => {
                 <div className={styles.ratingWrapper}>
                   {[
                     ...Array(
-                      Number.isFinite(book.rating) ? Math.floor(book.rating) : 0
+                      Number.isFinite(book.rating)
+                        ? Math.floor(book.rating)
+                        : 0,
                     ),
                   ].map((_, index) => (
                     <Star
