@@ -8,7 +8,7 @@ A full-stack **Book Seller Web Application** that allows users to browse books, 
 
 This project demonstrates **end-to-end development** including frontend, backend, database, and deployment.
 
-> Built using Spring Boot, MongoDB, and React, and deployed on Render and Netlify.
+Built using Spring Boot, MongoDB, and React, and deployed on Render and Netlify.
 
 ---
 
