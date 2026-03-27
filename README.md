@@ -147,17 +147,18 @@ npm start
 ## 📸 Screenshots
 
 ![HomePage-FrontEnd](https://github.com/user-attachments/assets/ac60d25d-c7d2-4df6-9201-70f16690584d)
-![Orders](https://github.com/user-attachments/assets/53db8897-f9f5-485a-b5cf-835bb880d9e7)
-![BooksList](https://github.com/user-attachments/assets/5d330a09-c189-48e1-b0bb-af2bfb23a342)
-![HomePage](https://github.com/user-attachments/assets/5e80e084-b447-4792-8886-f8817f5e148f)
-![Log-InPage](https://github.com/user-attachments/assets/25f687f8-8225-4901-aced-656e37b28a7b)
-![MyOrders](https://github.com/user-attachments/assets/a8c28047-1759-4a34-801c-f7c1848207bc)
-![Orders-](https://github.com/user-attachments/assets/26b21ab7-3606-470d-9127-bb78d1b3f06f)
-![CheckOut](https://github.com/user-attachments/assets/235cd220-3898-4451-bd27-d3e2d81cd826)
-![Cart](https://github.com/user-attachments/assets/8999c479-a980-402d-861e-7bc0d0c59a2a)
-![Contact](https://github.com/user-attachments/assets/b5b8fd94-0d51-4a6b-b243-782e842e9296)
-![Books](https://github.com/user-attachments/assets/02e915a2-2fda-4610-9f58-dc5cfa1c78ae)
-![About](https://github.com/user-attachments/assets/8ae966e4-bb18-42e5-aaa5-2deb9a518f4d)
+![About](https://github.com/user-attachments/assets/7b194899-f1e7-4de1-a65b-0f70e93e61ad)
+![Books](https://github.com/user-attachments/assets/70455139-12f5-4f03-86fe-2761c270634b)
+![Contact](https://github.com/user-attachments/assets/e0882870-fae4-46d7-893c-8e79fc60767d)
+![MyOrders](https://github.com/user-attachments/assets/12139e98-19ff-4780-af5f-172fd5a77341)
+![Cart](https://github.com/user-attachments/assets/c818bc8d-7f65-4454-a33f-3d22189964ef)
+![CheckOut](https://github.com/user-attachments/assets/099ab0ee-ec47-4898-b910-35299ed1183e)
+![Log-InPage](https://github.com/user-attachments/assets/24ac76a5-ca12-457a-aeeb-739336a60741)
+![HomePage](https://github.com/user-attachments/assets/93e07a88-9069-4f58-85b0-b2c8dadc7670)
+![BooksList](https://github.com/user-attachments/assets/bcf30eb5-90fe-4688-83ad-99a87375650f)
+![Orders](https://github.com/user-attachments/assets/04f6802d-5103-43ec-a200-0144c2b07b67)
+
+
 
 
 * Home Page
