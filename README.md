@@ -1,8 +1,14 @@
-📚 Book Seller App – Full Stack Web Application
 
-Built using React (Vite), Tailwind CSS, Node.js, Express.js, MongoDB, JWT Authentication, and Stripe, deployed on Netlify and Render.
 
-📌 Project Description
+---
+
+# 📚 Book Seller App – Full Stack Web Application
+
+> Built using React (Vite), Tailwind CSS, Node.js, Express.js, MongoDB, JWT Authentication, and Stripe, deployed on Netlify and Render.
+
+---
+
+## 📌 Project Description
 
 The Book Seller App is a full-stack web application designed to manage book listings, user authentication, cart operations, and order processing with payment integration.
 
@@ -12,112 +18,201 @@ The backend is developed using Node.js and Express.js, exposing RESTful APIs for
 
 The application implements secure authentication using JWT, password hashing with bcrypt, file upload handling with Multer, and payment integration using Stripe. It also includes a hybrid cart system that supports both guest users (localStorage) and authenticated users (server-side cart).
 
-🚀 Live Demo
-🌐 User Frontend:
-https://book-seller-app-frontend-panel.netlify.app/
-🛠️ Admin Panel:
-https://book-seller-app-admin-panel.netlify.app/
-⚙️ Backend API:
-https://book-seller-app-5u6t.onrender.com
-📂 GitHub Repository:
-https://github.com/pundalikkore/book-seller-app
-🛠️ Tech Stack
-🎨 Frontend (User + Admin):
-React.js (Vite)
-Tailwind CSS
-JavaScript (ES6+)
-Axios
-React Router
-React Toastify
-🎨 UI & Enhancements:
-Lucide React & React Icons
-Swiper / React Slick (carousels)
-⚙️ Backend:
-Node.js
-Express.js
-RESTful APIs
-Mongoose (ODM)
-🗄️ Database:
-MongoDB (Atlas)
-🔐 Authentication & Security:
-JWT (jsonwebtoken)
-bcrypt (password hashing)
-💳 Payments:
-Stripe API integration
-📦 Other Tools:
-Multer (image upload)
-Validator
-UUID
-☁️ Deployment:
-Netlify (Frontend & Admin)
-Render (Backend)
-GitHub (Version Control)
-✨ Features
-👤 User Features:
-User authentication (JWT-based login)
-Browse and explore books
-View detailed book information
-Add to cart and manage items
-Place orders
-Secure payment integration using Stripe
-🛒 Cart & Orders:
-Hybrid cart system (localStorage + backend sync)
-Add, update, and remove items from cart
-Persistent cart for guest users
-Order creation and management
-👨‍💼 Admin Features:
-Add books with image upload
-View and manage all books
-Delete books along with images
-Manage inventory
-🔐 Authentication:
-Secure login with JWT tokens
-Token-based API access
-Logout functionality
-⚙️ Backend Features:
-RESTful API architecture
-Modular route structure (user, book, cart, order)
-Password encryption using bcrypt
-File upload and static file serving
-Payment integration using Stripe
-CORS configuration for production
-🎨 UI/UX Features:
-Responsive and modern UI
-Toast notifications
-Password visibility toggle
-Carousel/slider for book display
-📂 Project Structure
+---
+
+## 🚀 Live Demo
+
+* 🌐 **User Frontend:**
+  [https://book-seller-app-frontend-panel.netlify.app/](https://book-seller-app-frontend-panel.netlify.app/)
+
+* 🛠️ **Admin Panel:**
+  [https://book-seller-app-admin-panel.netlify.app/](https://book-seller-app-admin-panel.netlify.app/)
+
+* ⚙️ **Backend API:**
+  [https://book-seller-app-5u6t.onrender.com](https://book-seller-app-5u6t.onrender.com)
+
+* 📂 **GitHub Repository:**
+  [https://github.com/pundalikkore/book-seller-app](https://github.com/pundalikkore/book-seller-app)
+
+---
+
+## 🛠️ Tech Stack
+
+### 🎨 Frontend (User + Admin):
+
+* React.js (Vite)
+* Tailwind CSS
+* JavaScript (ES6+)
+* Axios
+* React Router
+* React Toastify
+
+### 🎨 UI & Enhancements:
+
+* Lucide React & React Icons
+* Swiper / React Slick (carousels)
+
+### ⚙️ Backend:
+
+* Node.js
+* Express.js
+* RESTful APIs
+* Mongoose (ODM)
+
+### 🗄️ Database:
+
+* MongoDB (Atlas)
+
+### 🔐 Authentication & Security:
+
+* JWT (jsonwebtoken)
+* bcrypt (password hashing)
+
+### 💳 Payments:
+
+* Stripe API integration
+
+### 📦 Other Tools:
+
+* Multer (image upload)
+* Validator
+* UUID
+
+### ☁️ Deployment:
+
+* Netlify (Frontend & Admin)
+* Render (Backend)
+* GitHub (Version Control)
+
+---
+
+## ✨ Features
+
+### 👤 User Features:
+
+* User authentication (JWT-based login)
+* Browse and explore books
+* View detailed book information
+* Add to cart and manage items
+* Place orders
+* Secure payment integration using Stripe
+
+### 🛒 Cart & Orders:
+
+* Hybrid cart system (localStorage + backend sync)
+* Add, update, and remove items from cart
+* Persistent cart for guest users
+* Order creation and management
+
+### 👨‍💼 Admin Features:
+
+* Add books with image upload
+* View and manage all books
+* Delete books along with images
+* Manage inventory
+
+### 🔐 Authentication:
+
+* Secure login with JWT tokens
+* Token-based API access
+* Logout functionality
+
+### ⚙️ Backend Features:
+
+* RESTful API architecture
+* Modular route structure (`user`, `book`, `cart`, `order`)
+* Password encryption using bcrypt
+* File upload and static file serving
+* Payment integration using Stripe
+* CORS configuration for production
+
+### 🎨 UI/UX Features:
+
+* Responsive and modern UI
+* Toast notifications
+* Password visibility toggle
+* Carousel/slider for book display
+
+---
+
+## 📂 Project Structure
+
+```
 book-seller-app/
 │
 ├── frontend/        # User Interface (React + Vite)
 ├── admin/           # Admin Panel (React + Vite)
 ├── backend/         # Node.js + Express API
 └── uploads/         # Uploaded images
-⚙️ Installation & Setup
-1️⃣ Clone Repository
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone Repository
+
+```bash
 git clone https://github.com/pundalikkore/book-seller-app.git
 cd book-seller-app
-2️⃣ Backend Setup
+```
+
+---
+
+### 2️⃣ Backend Setup
+
+```bash
 cd backend
 npm install
+```
 
-Create .env file:
+Create `.env` file:
 
+```
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 STRIPE_SECRET_KEY=your_stripe_key
+```
 
 Run backend:
 
+```bash
 npm start
-3️⃣ Frontend Setup
+```
+
+---
+
+### 3️⃣ Frontend Setup
+
+```bash
 cd frontend
 npm install
 npm run dev
-4️⃣ Admin Panel Setup
+```
+
+---
+
+### 4️⃣ Admin Panel Setup
+
+```bash
 cd admin
 npm install
 npm run dev
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the backend folder:
+
+```
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+STRIPE_SECRET_KEY=your_stripe_key
+```
+
+⚠️ Do not expose your credentials publicly.
 
 ---
 
@@ -135,34 +230,43 @@ npm run dev
 ![BooksList](https://github.com/user-attachments/assets/bcf30eb5-90fe-4688-83ad-99a87375650f)
 ![Orders](https://github.com/user-attachments/assets/04f6802d-5103-43ec-a200-0144c2b07b67)
 
+* Home Page
+* Login Page
+* Admin Dashboard
+* Cart Page
 
+---
 
-Home Page
-Login Page
-Admin Dashboard
-Cart Page
+## 🧹 Code Quality
 
-🧹 Code Quality
-ESLint configured for clean code
-React Hooks linting rules applied
-Modern ES module structure
+* ESLint configured for clean code
+* React Hooks linting rules applied
+* Modern ES module structure
 
-🔥 Future Enhancements
-Role-based access (Admin/User)
-Order tracking system
-Advanced search & filters
-Email notifications
+---
 
-👨‍💻 Author
-Pundalik Kore
+## 🔥 Future Enhancements
+
+* Role-based access (Admin/User)
+* Order tracking system
+* Advanced search & filters
+* Email notifications
+
+---
+
+## 👨‍💻 Author
+
+**Pundalik Kore**
 📍 Bengaluru, India
-📧 pundalikkore@gmail.com
+📧 [pundalikkore@gmail.com](mailto:pundalikkore@gmail.com)
+🔗 GitHub: [https://github.com/pundalikkore](https://github.com/pundalikkore)
 
-🔗 GitHub: https://github.com/pundalikkore
+---
 
-⭐ Support
+## ⭐ Support
 
 If you like this project, please ⭐ the repository!
+
 ---
 
 
