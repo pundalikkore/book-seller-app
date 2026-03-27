@@ -210,6 +210,7 @@ Create a `.env` file in the backend folder:
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 STRIPE_SECRET_KEY=your_stripe_key
+PORT=4000
 ```
 
 ⚠️ Do not expose your credentials publicly.
@@ -218,17 +219,29 @@ STRIPE_SECRET_KEY=your_stripe_key
 
 ## 📸 Screenshots
 
-![HomePage-FrontEnd](https://github.com/user-attachments/assets/ac60d25d-c7d2-4df6-9201-70f16690584d)
+### 🏠 Home Page
+![Home](https://github.com/user-attachments/assets/ac60d25d-c7d2-4df6-9201-70f16690584d)
+
+### ℹ️ About Page
 ![About](https://github.com/user-attachments/assets/7b194899-f1e7-4de1-a65b-0f70e93e61ad)
+
+### 📚 Books Page
 ![Books](https://github.com/user-attachments/assets/70455139-12f5-4f03-86fe-2761c270634b)
-![Contact](https://github.com/user-attachments/assets/e0882870-fae4-46d7-893c-8e79fc60767d)
-![MyOrders](https://github.com/user-attachments/assets/12139e98-19ff-4780-af5f-172fd5a77341)
+
+### 🛒 Cart Page
 ![Cart](https://github.com/user-attachments/assets/c818bc8d-7f65-4454-a33f-3d22189964ef)
-![CheckOut](https://github.com/user-attachments/assets/099ab0ee-ec47-4898-b910-35299ed1183e)
-![Log-InPage](https://github.com/user-attachments/assets/24ac76a5-ca12-457a-aeeb-739336a60741)
-![HomePage](https://github.com/user-attachments/assets/93e07a88-9069-4f58-85b0-b2c8dadc7670)
-![BooksList](https://github.com/user-attachments/assets/bcf30eb5-90fe-4688-83ad-99a87375650f)
-![Orders](https://github.com/user-attachments/assets/04f6802d-5103-43ec-a200-0144c2b07b67)
+
+### 💳 Checkout Page
+![Checkout](https://github.com/user-attachments/assets/099ab0ee-ec47-4898-b910-35299ed1183e)
+
+### 📦 Orders Page
+![Orders](https://github.com/user-attachments/assets/12139e98-19ff-4780-af5f-172fd5a77341)
+
+### 🔐 Login Page
+![Login](https://github.com/user-attachments/assets/24ac76a5-ca12-457a-aeeb-739336a60741)
+
+### 🛠️ Admin Dashboard
+![Admin](https://github.com/user-attachments/assets/93e07a88-9069-4f58-85b0-b2c8dadc7670)
 
 * Home Page
 * Login Page
