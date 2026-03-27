@@ -1,148 +1,123 @@
+📚 Book Seller App – Full Stack Web Application
 
+Built using React (Vite), Tailwind CSS, Node.js, Express.js, MongoDB, JWT Authentication, and Stripe, deployed on Netlify and Render.
 
----
+📌 Project Description
 
-# 📚 Book Seller App – Full Stack Web Application
+The Book Seller App is a full-stack web application designed to manage book listings, user authentication, cart operations, and order processing with payment integration.
 
-A full-stack **Book Seller Web Application** that allows users to browse books, place orders, and enables admins to manage books and orders efficiently.
+The application consists of a user-facing frontend and a dedicated admin panel built using React (Vite), providing a fast and responsive user experience. The admin panel allows administrators to manage books with full CRUD functionality, including image uploads.
 
-This project demonstrates **end-to-end development** including frontend, backend, database, and deployment.
+The backend is developed using Node.js and Express.js, exposing RESTful APIs for user authentication, book management, cart handling, and order processing. MongoDB is used as the database, with Mongoose for efficient data modeling.
 
-Built using Spring Boot, MongoDB, and React, and deployed on Render and Netlify.
+The application implements secure authentication using JWT, password hashing with bcrypt, file upload handling with Multer, and payment integration using Stripe. It also includes a hybrid cart system that supports both guest users (localStorage) and authenticated users (server-side cart).
 
----
-
-## 🚀 Live Demo
-
-* 🌐 **User Frontend:**
-  [https://book-seller-app-frontend-panel.netlify.app/](https://book-seller-app-frontend-panel.netlify.app/)
-
-* 🛠️ **Admin Panel:**
-  [https://book-seller-app-admin-panel.netlify.app/](https://book-seller-app-admin-panel.netlify.app/)
-
-* ⚙️ **Backend API:**
-  [https://book-seller-app-5u6t.onrender.com](https://book-seller-app-5u6t.onrender.com)
-
-* 📂 **GitHub Repository:**
-  [https://github.com/pundalikkore/book-seller-app](https://github.com/pundalikkore/book-seller-app)
-
----
-
-## 🛠️ Tech Stack
-
-### 🎨 Frontend:
-
-* HTML5
-* CSS3
-* JavaScript
-* React.js
-* Bootstrap
-
-### ⚙️ Backend:
-
-* Java
-* Spring Boot
-* REST API
-
-### 🗄️ Database:
-
-* MongoDB
-
-### ☁️ Deployment:
-
-* GitHub
-* Render (Backend)
-* Netlify (Frontend & Admin Panel)
-
----
-
-## ✨ Features
-
-### 👤 User Features:
-
-* Browse books
-* View book details
-* Add to cart
-* Place orders
-
-### 🔐 Admin Features:
-
-* Add new books
-* Update book details
-* Delete books
-* View all orders
-
----
-
-## 📂 Project Structure
-
-```id="q3kbdu"
+🚀 Live Demo
+🌐 User Frontend:
+https://book-seller-app-frontend-panel.netlify.app/
+🛠️ Admin Panel:
+https://book-seller-app-admin-panel.netlify.app/
+⚙️ Backend API:
+https://book-seller-app-5u6t.onrender.com
+📂 GitHub Repository:
+https://github.com/pundalikkore/book-seller-app
+🛠️ Tech Stack
+🎨 Frontend (User + Admin):
+React.js (Vite)
+Tailwind CSS
+JavaScript (ES6+)
+Axios
+React Router
+React Toastify
+🎨 UI & Enhancements:
+Lucide React & React Icons
+Swiper / React Slick (carousels)
+⚙️ Backend:
+Node.js
+Express.js
+RESTful APIs
+Mongoose (ODM)
+🗄️ Database:
+MongoDB (Atlas)
+🔐 Authentication & Security:
+JWT (jsonwebtoken)
+bcrypt (password hashing)
+💳 Payments:
+Stripe API integration
+📦 Other Tools:
+Multer (image upload)
+Validator
+UUID
+☁️ Deployment:
+Netlify (Frontend & Admin)
+Render (Backend)
+GitHub (Version Control)
+✨ Features
+👤 User Features:
+User authentication (JWT-based login)
+Browse and explore books
+View detailed book information
+Add to cart and manage items
+Place orders
+Secure payment integration using Stripe
+🛒 Cart & Orders:
+Hybrid cart system (localStorage + backend sync)
+Add, update, and remove items from cart
+Persistent cart for guest users
+Order creation and management
+👨‍💼 Admin Features:
+Add books with image upload
+View and manage all books
+Delete books along with images
+Manage inventory
+🔐 Authentication:
+Secure login with JWT tokens
+Token-based API access
+Logout functionality
+⚙️ Backend Features:
+RESTful API architecture
+Modular route structure (user, book, cart, order)
+Password encryption using bcrypt
+File upload and static file serving
+Payment integration using Stripe
+CORS configuration for production
+🎨 UI/UX Features:
+Responsive and modern UI
+Toast notifications
+Password visibility toggle
+Carousel/slider for book display
+📂 Project Structure
 book-seller-app/
 │
-├── frontend/        # User Interface (React)
-├── admin/           # Admin Panel (React)
-├── backend/         # Spring Boot API
-└── database/        # MongoDB collections / configs
-```
-
----
-
-## ⚙️ Installation & Setup
-
-### 1️⃣ Clone the Repository
-
-```bash id="fr6cx3"
+├── frontend/        # User Interface (React + Vite)
+├── admin/           # Admin Panel (React + Vite)
+├── backend/         # Node.js + Express API
+└── uploads/         # Uploaded images
+⚙️ Installation & Setup
+1️⃣ Clone Repository
 git clone https://github.com/pundalikkore/book-seller-app.git
 cd book-seller-app
-```
-
----
-
-### 2️⃣ Backend Setup (Spring Boot + MongoDB)
-
-```bash id="p7wl2l"
+2️⃣ Backend Setup
 cd backend
-```
+npm install
 
-Update `application.properties`:
+Create .env file:
 
-```properties id="z6u1hq"
-spring.data.mongodb.uri=mongodb://localhost:27017/bookdb
-```
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+STRIPE_SECRET_KEY=your_stripe_key
 
 Run backend:
 
-```bash id="0xqq9v"
-mvn spring-boot:run
-```
-
----
-
-### 3️⃣ Frontend Setup
-
-```bash id="9mlrx1"
+npm start
+3️⃣ Frontend Setup
 cd frontend
 npm install
-npm start
-```
-
----
-
-### 4️⃣ Admin Panel Setup
-
-```bash id="wnpcj5"
+npm run dev
+4️⃣ Admin Panel Setup
 cd admin
 npm install
-npm start
-```
-
----
-
-## 🌍 Deployment
-
-* Backend deployed on Render
-* Frontend & Admin deployed on Netlify
-* Source code managed via GitHub
+npm run dev
 
 ---
 
@@ -162,36 +137,32 @@ npm start
 
 
 
+Home Page
+Login Page
+Admin Dashboard
+Cart Page
 
-* Home Page
-* Book List
-* Admin Dashboard
-* Orders Page
+🧹 Code Quality
+ESLint configured for clean code
+React Hooks linting rules applied
+Modern ES module structure
 
----
+🔥 Future Enhancements
+Role-based access (Admin/User)
+Order tracking system
+Advanced search & filters
+Email notifications
 
-## 🔥 Future Enhancements
-
-* User Authentication (JWT)
-* Payment Gateway Integration
-* Search & Filter functionality
-* Order Tracking System
-
----
-
-## 👨‍💻 Author
-
-**Pundalik Kore**
+👨‍💻 Author
+Pundalik Kore
 📍 Bengaluru, India
-📧 [pundalikkore@gmail.com](mailto:pundalikkore@gmail.com)
-🔗 GitHub: [https://github.com/pundalikkore](https://github.com/pundalikkore)
+📧 pundalikkore@gmail.com
 
----
+🔗 GitHub: https://github.com/pundalikkore
 
-## ⭐ Support
+⭐ Support
 
 If you like this project, please ⭐ the repository!
-
 ---
 
 
